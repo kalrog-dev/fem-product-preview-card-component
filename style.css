@@ -1,3 +1,40 @@
+/* Fonts */
+@font-face {
+    font-family: "Fraunces";
+    font-weight: 700;
+    src: url(./fonts/Fraunces-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 500;
+    src: url(./fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    src: url(./fonts/Montserrat-Bold.ttf);
+}
+
+/* Variables */
+:root {
+    --clr-primary: hsl(158, 36%, 37%);      /* Deep Aquamarine */
+    --clr-primary-dark: hsl(158, 42%, 18%); /* Dark Aquamarine */
+    --clr-neutral-700: hsl(212, 21%, 14%);  /* Gunmetal */
+    --clr-neutral-400: hsl(228, 12%, 48%);  /* Autometal Saurus */
+    --clr-neutral-300: hsl(30, 38%, 92%);   /* Cream */
+    --clr-neutral-100: hsl(0, 0%, 100%);    /* Pure White */
+
+    --fs-700: 2rem;
+    --fs-400: 0.875rem;
+    --fs-300: 0.75rem;
+
+    --ff-body: "Montserrat", sans-serif;
+    --ff-heading: "Fraunces", serif;
+}
+
+/* Reset */
 *,
 *::before,
 *::after {
@@ -5,3 +42,51 @@
     margin: 0;
     padding: 0;
 }
+
+/* General styles */
+body {
+    color: var(--clr-neutral-400);
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Buttons */
+.btn {
+    text-align: center;
+    text-decoration: none;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary);
+    font-family: inherit;
+    padding: 1em 2.1em;
+}
+
+/* Typography */
+h1 {
+    color: var(--clr-neutral-700);
+    font-family: var(--ff-heading);
+    font-size: var(--fs-700);
+    line-height: 1;
+}
+
+/* Layout */
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__text-content {
+    display: grid;
+}
+
+.card__image {
+    order: -1;
+}
+
+/* Media queries */
