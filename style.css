@@ -45,7 +45,12 @@
 
 /* General styles */
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     color: var(--clr-neutral-400);
+    background-color: var(--clr-neutral-300);
     font-family: var(--ff-body);
     font-size: var(--fs-400);
     font-weight: 500;
@@ -55,6 +60,7 @@ body {
 img {
     display: block;
     max-width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
 /* Buttons */
@@ -64,29 +70,75 @@ img {
     color: var(--clr-neutral-100);
     background-color: var(--clr-primary);
     font-family: inherit;
+    font-weight: 700;
     padding: 1em 2.1em;
+    border-radius: 8px;
 }
 
 /* Typography */
-h1 {
+.card__title {
     color: var(--clr-neutral-700);
     font-family: var(--ff-heading);
     font-size: var(--fs-700);
     line-height: 1;
 }
 
+.card__product-type {
+    font-size: var(--fs-300);
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.card__price-current {
+    color: var(--clr-primary);
+    font-family: var(--ff-heading);
+    font-size: var(--fs-700);
+    font-weight: 700;
+}
+
+.card__price-original {
+    text-decoration: line-through;
+}
+
 /* Layout */
 .card {
     display: flex;
     flex-direction: column;
-}
-
-.card__text-content {
-    display: grid;
+    width: 91.5%;
+    background-color: var(--clr-neutral-100);
+    border-radius: 10px;
 }
 
 .card__image {
     order: -1;
+}
+
+.card__text-content {
+    display: grid;
+    padding: 1.5em;
+}
+
+.card__product-type {
+    margin-bottom: 1em;
+}
+
+.card__title {
+    margin-bottom: 0.5em;
+}
+
+.card__body {
+    margin-bottom: 1.7em;
+}
+
+.card__price-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.4em;
+}
+
+.card__price-current {
+    margin-right: 0.6em;
 }
 
 /* Media queries */
